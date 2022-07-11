@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var appTitle: UILabel!
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var Result1: UILabel!
@@ -52,6 +53,10 @@ class ViewController: UIViewController {
         
     }
     
+    func titleDesign() {
+        appTitle.font = .systemFont(ofSize: 20)
+        appTitle.textColor = .black
+    }
 
     @IBAction func button1Clicked(_ sender: Any) {
         result1Number += 1
