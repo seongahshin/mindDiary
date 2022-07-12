@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C16E0C7287D02E1003306D7 /* SesacViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C16E0C6287D02E1003306D7 /* SesacViewController.swift */; };
+		8C16E0C9287D2128003306D7 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C16E0C8287D2128003306D7 /* SegmentedViewController.swift */; };
 		8C46D638287C094D00486DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C46D637287C094D00486DD6 /* AppDelegate.swift */; };
 		8C46D63A287C094D00486DD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C46D639287C094D00486DD6 /* SceneDelegate.swift */; };
 		8C46D63C287C094D00486DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C46D63B287C094D00486DD6 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C16E0C6287D02E1003306D7 /* SesacViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesacViewController.swift; sourceTree = "<group>"; };
+		8C16E0C8287D2128003306D7 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
 		8C46D634287C094D00486DD6 /* mindDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C46D637287C094D00486DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C46D639287C094D00486DD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				8C46D639287C094D00486DD6 /* SceneDelegate.swift */,
 				8C46D63B287C094D00486DD6 /* ViewController.swift */,
 				8C46D63D287C094D00486DD6 /* Main.storyboard */,
+				8C16E0C8287D2128003306D7 /* SegmentedViewController.swift */,
+				8C16E0C6287D02E1003306D7 /* SesacViewController.swift */,
 				8C46D640287C094E00486DD6 /* Assets.xcassets */,
 				8C46D642287C094E00486DD6 /* LaunchScreen.storyboard */,
 				8C46D645287C094E00486DD6 /* Info.plist */,
@@ -140,6 +146,8 @@
 			files = (
 				8C46D63C287C094D00486DD6 /* ViewController.swift in Sources */,
 				8C46D638287C094D00486DD6 /* AppDelegate.swift in Sources */,
+				8C16E0C9287D2128003306D7 /* SegmentedViewController.swift in Sources */,
+				8C16E0C7287D02E1003306D7 /* SesacViewController.swift in Sources */,
 				8C46D63A287C094D00486DD6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

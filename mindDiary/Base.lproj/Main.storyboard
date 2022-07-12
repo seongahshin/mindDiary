@@ -9,6 +9,47 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="p6l-AV-EH3">
+            <objects>
+                <viewController id="vFn-ay-SUU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U2J-Lm-zro">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="ㅏㅏㅏㅓㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tL-fo-qoN">
+                                <rect key="frame" x="20" y="64" width="295" height="21"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로맨스 스릴러 액션" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqk-16-8zc">
+                                <rect key="frame" x="335" y="64" width="59" height="20.5"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="59" id="Q1c-Cc-uAh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DT6-3e-UQ9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mqk-16-8zc" firstAttribute="top" secondItem="DT6-3e-UQ9" secondAttribute="top" constant="20" id="FTp-Og-TzM"/>
+                            <constraint firstItem="2tL-fo-qoN" firstAttribute="leading" secondItem="DT6-3e-UQ9" secondAttribute="leading" constant="20" id="K6p-Br-YZx"/>
+                            <constraint firstItem="2tL-fo-qoN" firstAttribute="top" secondItem="DT6-3e-UQ9" secondAttribute="top" constant="20" id="Y0k-MB-j0I"/>
+                            <constraint firstItem="DT6-3e-UQ9" firstAttribute="trailing" secondItem="Mqk-16-8zc" secondAttribute="trailing" constant="20" id="aXu-7h-W9h"/>
+                            <constraint firstItem="Mqk-16-8zc" firstAttribute="leading" secondItem="2tL-fo-qoN" secondAttribute="trailing" constant="20" id="r1c-0E-NFF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fo5-2F-xRe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1224.6376811594205" y="352.90178571428572"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mindDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,23 +65,23 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="sesac_slime2"/>
                                         <connections>
-                                            <action selector="button1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gms-lf-bG1"/>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6RU-1m-cpm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hER-zQ-s5l">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hER-zQ-s5l">
                                         <rect key="frame" x="127.5" y="0.0" width="119" height="125"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="sesac_slime3"/>
                                         <connections>
-                                            <action selector="button2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkf-8f-b1i"/>
+                                            <action selector="buttonClicked1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2Y-h3-sAl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1E-Mc-mUB">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1E-Mc-mUB">
                                         <rect key="frame" x="254.5" y="0.0" width="119.5" height="125"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="sesac_slime4"/>
                                         <connections>
-                                            <action selector="button3Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2Q-Zg-Fjc"/>
+                                            <action selector="buttonClicked2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FrB-hl-GTM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -58,7 +99,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="sesac_slime5"/>
                                         <connections>
-                                            <action selector="button4Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0mq-3T-pS4"/>
+                                            <action selector="buttonClicked3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8P-wl-1SG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abg-Va-QhN">
@@ -66,7 +107,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="sesac_slime6"/>
                                         <connections>
-                                            <action selector="button5Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rea-ri-P2U"/>
+                                            <action selector="buttonClicked4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xV8-mN-JOi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oB4-8s-2Pt">
@@ -74,7 +115,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="sesac_slime7"/>
                                         <connections>
-                                            <action selector="button6Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qZ2-ee-k6E"/>
+                                            <action selector="buttonClicked5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVn-ae-C0H"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -92,7 +133,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="sesac_slime1"/>
                                         <connections>
-                                            <action selector="button7Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="etH-qP-lR0"/>
+                                            <action selector="buttonClicked6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xY9-er-8Lg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvs-Mp-lSf">
@@ -100,7 +141,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="sesac_slime8"/>
                                         <connections>
-                                            <action selector="button8Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HOu-fy-7cb"/>
+                                            <action selector="buttonClicked7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KL5-ap-5B4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-M9-vGO">
@@ -108,7 +149,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="sesac_slime9"/>
                                         <connections>
-                                            <action selector="button9Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lc0-EX-I3B"/>
+                                            <action selector="buttonClicked8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTG-du-2O1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -243,6 +284,115 @@
             </objects>
             <point key="canvasLocation" x="-26.086956521739133" y="85.714285714285708"/>
         </scene>
+        <!--Sesac View Controller-->
+        <scene sceneID="j2l-uz-Ffl">
+            <objects>
+                <viewController id="tJB-jh-AyG" customClass="SesacViewController" customModule="mindDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iCF-mZ-WiJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="niz-wR-YdA">
+                                <rect key="frame" x="77" y="118" width="180" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNi-w5-3kH">
+                                        <rect key="frame" x="20" y="20" width="140" height="127"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="sesac_slime1"/>
+                                        <connections>
+                                            <action selector="emotionFirstButtonClicked:" destination="tJB-jh-AyG" eventType="touchUpInside" id="Har-c9-RWi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IG8-GD-onY">
+                                        <rect key="frame" x="20" y="155" width="140" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xcI-Fs-zq3">
+                                <rect key="frame" x="72" y="329" width="188" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKg-Nq-mly">
+                                        <rect key="frame" x="20" y="20" width="148" height="143"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="sesac_slime3"/>
+                                        <connections>
+                                            <action selector="emotionFirstButtonClicked:" destination="tJB-jh-AyG" eventType="touchUpInside" id="Qqx-nB-pts"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgW-iv-zwe">
+                                        <rect key="frame" x="20" y="171" width="148" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2FG-bR-hUS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="emotionFirstLabel" destination="IG8-GD-onY" id="YN6-Ph-uTE"/>
+                        <outlet property="emotionSecondLabel" destination="bgW-iv-zwe" id="hhq-81-sAx"/>
+                        <outlet property="firstButton" destination="PNi-w5-3kH" id="j9f-aD-QhO"/>
+                        <outlet property="secondButton" destination="TKg-Nq-mly" id="LRc-1b-dBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJ5-Lm-p5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708.69565217391312" y="85.714285714285708"/>
+        </scene>
+        <!--Segmented View Controller-->
+        <scene sceneID="boi-Ue-2AO">
+            <objects>
+                <viewController id="xYf-84-9jR" customClass="SegmentedViewController" customModule="mindDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bBD-LM-hAc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UE-Km-bon">
+                                <rect key="frame" x="92" y="93" width="156" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rAA-nK-R7m">
+                                <rect key="frame" x="59" y="250" width="189" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlValueChanged:" destination="xYf-84-9jR" eventType="valueChanged" id="TGk-Ec-1Fu"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="alP-2e-kCz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="6UE-Km-bon" id="vQy-aQ-NVs"/>
+                        <outlet property="segmentedControl" destination="rAA-nK-R7m" id="V1U-R5-Nz3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nb8-mz-a8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686.95652173913049" y="733.92857142857144"/>
+        </scene>
     </scenes>
     <resources>
         <image name="sesac_slime1" width="278" height="258"/>
@@ -254,8 +404,14 @@
         <image name="sesac_slime7" width="278" height="258"/>
         <image name="sesac_slime8" width="278" height="258"/>
         <image name="sesac_slime9" width="278" height="258"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

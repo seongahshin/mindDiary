@@ -38,69 +38,88 @@ class ViewController: UIViewController {
     @IBOutlet weak var button9: UIButton!
     @IBOutlet weak var Result9: UILabel!
     
-    var result1Number = 0
-    var result2Number = 0
-    var result3Number = 0
-    var result4Number = 0
-    var result5Number = 0
-    var result6Number = 0
-    var result7Number = 0
-    var result8Number = 0
-    var result9Number = 0
+    var resultNumber: [Int] = [0,0,0,0,0,0,0,0,0]
+    var keyWord: [String] = ["사랑해","좋아해","당황해","속상해","우울해","심심해","행복해","화가나","슬퍼"]
+    
+    var answer: String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        titleDesign()
+        button1.tag = 0
+        button2.tag = 1
+        button3.tag = 2
+        button4.tag = 3
+        button5.tag = 4
+        button6.tag = 5
+        button7.tag = 6
+        button8.tag = 7
+        button9.tag = 8
     }
     
     func titleDesign() {
         appTitle.font = .systemFont(ofSize: 20)
         appTitle.textColor = .black
     }
-
-    @IBAction func button1Clicked(_ sender: Any) {
-        result1Number += 1
-        Result1.text = "사랑해 \(result1Number)"
+    
+    
+    func resultLable(_ labelName: UILabel, buttonName: UIButton) {
+        labelName.text = #"\#(keyWord[buttonName.tag]) \#(resultNumber[buttonName.tag])"#
+    }
+    
+    @IBAction func buttonClicked(_ sender: UIButton) {
+        resultNumber[sender.tag] += 1
+        resultLable(Result1, buttonName: button1)
+    }
+    
+    @IBAction func buttonClicked1(_ sender: UIButton) {
+        resultNumber[sender.tag] += 1
+        resultLable(Result2, buttonName: button2)
+    }
+    
+    @IBAction func buttonClicked2(_ sender: UIButton) {
+        resultNumber[sender.tag] += 1
+        resultLable(Result3, buttonName: button3)
+    }
+    
+    @IBAction func buttonClicked3(_ sender: UIButton) {
+        resultNumber[sender.tag] += 1
+        resultLable(Result4, buttonName: button4)
+    }
+    
+    @IBAction func buttonClicked4(_ sender: UIButton) {
+        resultNumber[sender.tag] += 1
+        resultLable(Result5, buttonName: button5)
+    }
+    
+    @IBAction func buttonClicked5(_ sender: UIButton) {
+        resultNumber[sender.tag] += 1
+        resultLable(Result6, buttonName: button6)
+    }
+    
+    @IBAction func buttonClicked6(_ sender: UIButton) {
+        resultNumber[sender.tag] += 1
+        resultLable(Result7, buttonName: button7)
+    }
+    
+    @IBAction func buttonClicked7(_ sender: UIButton) {
+        resultNumber[sender.tag] += 1
+        resultLable(Result8, buttonName: button8)
+    }
+    
+    @IBAction func buttonClicked8(_ sender: UIButton) {
+        resultNumber[sender.tag] += 1
+        resultLable(Result9, buttonName: button9)
     }
     
     
-    @IBAction func button2Clicked(_ sender: Any) {
-        result2Number += 1
-        Result2.text = "좋아해 \(result2Number)"
-    }
     
-    @IBAction func button3Clicked(_ sender: Any) {
-        result3Number += 1
-        Result3.text = "당황해 \(result3Number)"
-    }
     
-    @IBAction func button4Clicked(_ sender: Any) {
-        result4Number += 1
-        Result4.text = "속상해 \(result4Number)"
-    }
     
-    @IBAction func button5Clicked(_ sender: Any) {
-        result5Number += 1
-        Result5.text = "우울해 \(result5Number)"
-    }
     
-    @IBAction func button6Clicked(_ sender: Any) {
-        result6Number += 1
-        Result6.text = "심심해 \(result6Number)"
-    }
-    @IBAction func button7Clicked(_ sender: Any) {
-        result7Number += 1
-        Result7.text = "행복해 \(result7Number)"
-    }
-    @IBAction func button8Clicked(_ sender: Any) {
-        result8Number += 1
-        Result8.text = "화가나 \(result8Number)"
-    }
     
-    @IBAction func button9Clicked(_ sender: Any) {
-        result9Number += 1
-        Result9.text = "슬퍼 \(result9Number)"
-    }
+    
     
     
     
