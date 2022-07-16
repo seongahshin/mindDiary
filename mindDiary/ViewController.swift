@@ -207,12 +207,25 @@ class ViewController: UIViewController {
         showAlertController()
     }
     
+    func ClearResult(_ LabelName:UILabel, textResult: String) {
+        LabelName.text = textResult
+    }
     // 버튼 누르고 앱 재실행하면 기록 초기화
     @IBAction func dataClear(_ sender: UIButton) {
         for key in UserDefaults.standard.dictionaryRepresentation().keys {
                     UserDefaults.standard.removeObject(forKey: key.description)
                 }
+        ClearResult(Result1, textResult: keyWord.love.rawValue)
+        ClearResult(Result2, textResult: keyWord.like.rawValue)
+        ClearResult(Result3, textResult: keyWord.embarassed.rawValue)
+        ClearResult(Result4, textResult: keyWord.sad.rawValue)
+        ClearResult(Result5, textResult: keyWord.blue.rawValue)
+        ClearResult(Result6, textResult: keyWord.bord.rawValue)
+        ClearResult(Result7, textResult: keyWord.cloudnine.rawValue)
+        ClearResult(Result8, textResult: keyWord.mad.rawValue)
+        ClearResult(Result9, textResult: keyWord.tear.rawValue)
     }
+    
     
 }
 
