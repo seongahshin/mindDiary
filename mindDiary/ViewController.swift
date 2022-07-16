@@ -39,24 +39,36 @@ class ViewController: UIViewController {
     @IBOutlet weak var Result9: UILabel!
     
     var resultNumber: [Int] = [0,0,0,0,0,0,0,0,0]
-    var keyWord: [String] = ["사랑해","좋아해","당황해","속상해","우울해","심심해","행복해","화가나","슬퍼"]
+    
+    enum keyWord: String {
+        case love = "사랑해"
+        case like = "좋아해"
+        case embarassed = "당황해"
+        case sad = "속상해"
+        case blue = "우울해"
+        case bord = "심심해"
+        case cloudnine = "행복해"
+        case mad = "화가나"
+        case tear = "슬퍼"
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleDesign()
-        button1.tag = 0
-        button2.tag = 1
-        button3.tag = 2
-        button4.tag = 3
-        button5.tag = 4
-        button6.tag = 5
-        button7.tag = 6
-        button8.tag = 7
-        button9.tag = 8
+        Result1.text = "\(keyWord.love.rawValue) \(UserDefaults.standard.integer(forKey: "one"))"
+        Result2.text = "\(keyWord.like.rawValue) \(UserDefaults.standard.integer(forKey: "two"))"
+        Result3.text = "\(keyWord.embarassed.rawValue) \(UserDefaults.standard.integer(forKey: "three"))"
+        Result4.text = "\(keyWord.sad.rawValue) \(UserDefaults.standard.integer(forKey: "four"))"
+        Result5.text = "\(keyWord.blue.rawValue) \(UserDefaults.standard.integer(forKey: "five"))"
+        Result6.text = "\(keyWord.bord.rawValue) \(UserDefaults.standard.integer(forKey: "six"))"
+        Result7.text = "\(keyWord.cloudnine.rawValue) \(UserDefaults.standard.integer(forKey: "seven"))"
+        Result8.text = "\(keyWord.mad.rawValue) \(UserDefaults.standard.integer(forKey: "eight"))"
+        Result9.text = "\(keyWord.tear.rawValue) \(UserDefaults.standard.integer(forKey: "nine"))"
     }
     
     func titleDesign() {
+        
         appTitle.font = .systemFont(ofSize: 20)
         appTitle.textColor = .black
     }
@@ -79,54 +91,103 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func resultLable(_ labelName: UILabel, buttonName: UIButton) {
-        labelName.text = #"\#(keyWord[buttonName.tag]) \#(resultNumber[buttonName.tag])"#
-        showAlertController()
-    }
-    
     @IBAction func buttonClicked(_ sender: UIButton) {
-        resultNumber[sender.tag] += 1
-        resultLable(Result1, buttonName: button1)
+        // 기존 데이터값 가져오기
+        let firstValue = UserDefaults.standard.integer(forKey: "one")
+        // 감정 + 1
+        let firstupdateValue = firstValue + 1
+        // 새로운 값 저장
+        UserDefaults.standard.set(firstupdateValue,forKey: "one")
+        // 새로운 값 레이블에 보이기
+        Result1.text = "\(keyWord.love.rawValue) \(UserDefaults.standard.integer(forKey: "one"))"
     }
     
     @IBAction func buttonClicked1(_ sender: UIButton) {
-        resultNumber[sender.tag] += 1
-        resultLable(Result2, buttonName: button2)
+        // 기존 데이터값 가져오기
+        let SecondValue = UserDefaults.standard.integer(forKey: "two")
+        // 감정 + 1
+        let SecondupdateValue = SecondValue + 1
+        // 새로운 값 저장
+        UserDefaults.standard.set(SecondupdateValue,forKey: "two")
+        // 새로운 값 레이블에 보이기
+        Result2.text = "\(keyWord.like.rawValue) \(UserDefaults.standard.integer(forKey: "two"))"
+        
     }
     
     @IBAction func buttonClicked2(_ sender: UIButton) {
-        resultNumber[sender.tag] += 1
-        resultLable(Result3, buttonName: button3)
+        // 기존 데이터값 가져오기
+        let ThirdValue = UserDefaults.standard.integer(forKey: "three")
+        // 감정 + 1
+        let ThirdupdateValue = ThirdValue + 1
+        // 새로운 값 저장
+        UserDefaults.standard.set(ThirdupdateValue,forKey: "three")
+        // 새로운 값 레이블에 보이기
+        Result3.text = "\(keyWord.embarassed.rawValue) \(UserDefaults.standard.integer(forKey: "three"))"
+        
     }
     
     @IBAction func buttonClicked3(_ sender: UIButton) {
-        resultNumber[sender.tag] += 1
-        resultLable(Result4, buttonName: button4)
+        // 기존 데이터값 가져오기
+        let ForthValue = UserDefaults.standard.integer(forKey: "four")
+        // 감정 + 1
+        let ForthupdateValue = ForthValue + 1
+        // 새로운 값 저장
+        UserDefaults.standard.set(ForthupdateValue,forKey: "four")
+        // 새로운 값 레이블에 보이기
+        Result4.text = "\(keyWord.sad.rawValue) \(UserDefaults.standard.integer(forKey: "four"))"
+     
     }
     
     @IBAction func buttonClicked4(_ sender: UIButton) {
-        resultNumber[sender.tag] += 1
-        resultLable(Result5, buttonName: button5)
+        let FifthValue = UserDefaults.standard.integer(forKey: "five")
+        // 감정 + 1
+        let FifthupdateValue = FifthValue + 1
+        // 새로운 값 저장
+        UserDefaults.standard.set(FifthupdateValue,forKey: "five")
+        // 새로운 값 레이블에 보이기
+        Result5.text = "\(keyWord.blue.rawValue) \(UserDefaults.standard.integer(forKey: "five"))"
+    
     }
     
     @IBAction func buttonClicked5(_ sender: UIButton) {
-        resultNumber[sender.tag] += 1
-        resultLable(Result6, buttonName: button6)
+        let SixthValue = UserDefaults.standard.integer(forKey: "six")
+        // 감정 + 1
+        let SixthupdateValue = SixthValue + 1
+        // 새로운 값 저장
+        UserDefaults.standard.set(SixthupdateValue,forKey: "six")
+        // 새로운 값 레이블에 보이기
+        Result6.text = "\(keyWord.bord.rawValue) \(UserDefaults.standard.integer(forKey: "six"))"
+
     }
     
     @IBAction func buttonClicked6(_ sender: UIButton) {
-        resultNumber[sender.tag] += 1
-        resultLable(Result7, buttonName: button7)
+        let SeventhValue = UserDefaults.standard.integer(forKey: "seven")
+        // 감정 + 1
+        let SeventhupdateValue = SeventhValue + 1
+        // 새로운 값 저장
+        UserDefaults.standard.set(SeventhupdateValue,forKey: "seven")
+        // 새로운 값 레이블에 보이기
+        Result7.text = "\(keyWord.cloudnine.rawValue) \(UserDefaults.standard.integer(forKey: "seven"))"
     }
     
     @IBAction func buttonClicked7(_ sender: UIButton) {
-        resultNumber[sender.tag] += 1
-        resultLable(Result8, buttonName: button8)
+        let EighthValue = UserDefaults.standard.integer(forKey: "eight")
+        // 감정 + 1
+        let EighthupdateValue = EighthValue + 1
+        // 새로운 값 저장
+        UserDefaults.standard.set(EighthupdateValue,forKey: "eight")
+        // 새로운 값 레이블에 보이기
+        Result8.text = "\(keyWord.mad.rawValue) \(UserDefaults.standard.integer(forKey: "eight"))"
     }
     
     @IBAction func buttonClicked8(_ sender: UIButton) {
-        resultNumber[sender.tag] += 1
-        resultLable(Result9, buttonName: button9)
+        let NinethValue = UserDefaults.standard.integer(forKey: "nine")
+        // 감정 + 1
+        let NinethupdateValue = NinethValue + 1
+        // 새로운 값 저장
+        UserDefaults.standard.set(NinethupdateValue,forKey: "nine")
+        // 새로운 값 레이블에 보이기
+        Result9.text = "\(keyWord.tear.rawValue) \(UserDefaults.standard.integer(forKey: "nine"))"
     }
     
 }
