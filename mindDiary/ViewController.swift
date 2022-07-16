@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var appTitle: UILabel!
     
     @IBOutlet weak var button1: UIButton!
@@ -56,6 +57,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleDesign()
+        clearButtonDesign()
         Result1.text = "\(keyWord.love.rawValue) \(UserDefaults.standard.integer(forKey: "one"))"
         Result2.text = "\(keyWord.like.rawValue) \(UserDefaults.standard.integer(forKey: "two"))"
         Result3.text = "\(keyWord.embarassed.rawValue) \(UserDefaults.standard.integer(forKey: "three"))"
@@ -67,6 +69,11 @@ class ViewController: UIViewController {
         Result9.text = "\(keyWord.tear.rawValue) \(UserDefaults.standard.integer(forKey: "nine"))"
     }
     
+    func clearButtonDesign() {
+        clearButton.setTitle("기록 지우기", for: .normal)
+        clearButton.backgroundColor = .darkGray
+        clearButton.setTitleColor(.white, for: .normal)
+    }
     func titleDesign() {
         
         appTitle.font = .systemFont(ofSize: 20)
@@ -188,6 +195,13 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(NinethupdateValue,forKey: "nine")
         // 새로운 값 레이블에 보이기
         Result9.text = "\(keyWord.tear.rawValue) \(UserDefaults.standard.integer(forKey: "nine"))"
+    }
+    
+    // 버튼 누르고 앱 재실행하면 기록 초기화
+    @IBAction func dataClear(_ sender: UIButton) {
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+                    UserDefaults.standard.removeObject(forKey: key.description)
+                }
     }
     
 }

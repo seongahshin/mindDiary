@@ -222,6 +222,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiA-Er-i3v">
+                                <rect key="frame" x="173.5" y="150.5" width="67" height="33.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xiA-Er-i3v" secondAttribute="height" multiplier="2:1" id="Jf2-6m-nxr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="dataClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOh-dc-uIJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -229,6 +240,7 @@
                             <constraint firstItem="VqU-M0-U0R" firstAttribute="top" secondItem="XRa-vq-RNc" secondAttribute="bottom" constant="1" id="0dw-kI-upi"/>
                             <constraint firstItem="Jbb-ev-hcG" firstAttribute="top" secondItem="xdq-rU-hWX" secondAttribute="bottom" constant="1" id="1LQ-Lr-FWJ"/>
                             <constraint firstItem="xdq-rU-hWX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="32r-4d-5P9"/>
+                            <constraint firstItem="xiA-Er-i3v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="56a-k1-99g"/>
                             <constraint firstItem="V1j-o6-Nnm" firstAttribute="leading" secondItem="tsi-X0-tKy" secondAttribute="trailing" multiplier="0.98" constant="84" id="AZa-f5-ATn"/>
                             <constraint firstItem="z9S-qV-W8z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="F2n-4q-RXb"/>
                             <constraint firstItem="V1j-o6-Nnm" firstAttribute="top" secondItem="xdq-rU-hWX" secondAttribute="bottom" constant="1" id="NK4-3C-LXf"/>
@@ -236,6 +248,7 @@
                             <constraint firstItem="tsi-X0-tKy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SGk-8S-aQN"/>
                             <constraint firstItem="RVX-HG-sih" firstAttribute="leading" secondItem="O8H-XS-dri" secondAttribute="trailing" multiplier="0.98" constant="84" id="TZg-55-HqA"/>
                             <constraint firstItem="tsi-X0-tKy" firstAttribute="leading" secondItem="Jbb-ev-hcG" secondAttribute="trailing" multiplier="0.98" constant="84" id="WlJ-mM-qP3"/>
+                            <constraint firstItem="xiA-Er-i3v" firstAttribute="top" secondItem="aZ8-49-Cc5" secondAttribute="bottom" constant="15" id="Ws3-mq-dp2"/>
                             <constraint firstItem="tsi-X0-tKy" firstAttribute="top" secondItem="xdq-rU-hWX" secondAttribute="bottom" constant="1" id="XX8-oU-o7L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z9S-qV-W8z" secondAttribute="trailing" constant="20" id="ZJK-gD-VBe"/>
                             <constraint firstItem="0TF-O2-6vt" firstAttribute="top" secondItem="z9S-qV-W8z" secondAttribute="bottom" constant="1" id="aHl-XR-5qe"/>
@@ -278,6 +291,7 @@
                         <outlet property="button7" destination="Jbs-FB-QWN" id="x8s-3x-ema"/>
                         <outlet property="button8" destination="Xvs-Mp-lSf" id="rsh-ni-V4v"/>
                         <outlet property="button9" destination="aG7-M9-vGO" id="1wE-qh-h5E"/>
+                        <outlet property="clearButton" destination="xiA-Er-i3v" id="iJs-Pf-djA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
