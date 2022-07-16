@@ -82,14 +82,12 @@ class ViewController: UIViewController {
     
     func showAlertController() {
         // 1. 흰 바탕 : UIAlertController
-        let alert = UIAlertController(title: "알림", message: "오늘의 감정 일기를 저장하시겠습니까?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "알림", message: "감정일기가 저장되었습니다.", preferredStyle: .alert)
         
         // 2. 버튼
-        let ok = UIAlertAction(title: "네", style: .destructive, handler: nil)
-        let cancel = UIAlertAction(title: "아니오", style: .cancel, handler: nil)
+        let ok = UIAlertAction(title: "확인", style: .destructive, handler: nil)
 
         // 3. 흰 바탕에 버튼 추가 (이 순서대로 추가됨)
-        alert.addAction(cancel)
         alert.addAction(ok)
     
         
@@ -103,10 +101,13 @@ class ViewController: UIViewController {
         let firstValue = UserDefaults.standard.integer(forKey: "one")
         // 감정 + 1
         let firstupdateValue = firstValue + 1
+        
+        // 감정 + 1
         // 새로운 값 저장
         UserDefaults.standard.set(firstupdateValue,forKey: "one")
         // 새로운 값 레이블에 보이기
         Result1.text = "\(keyWord.love.rawValue) \(UserDefaults.standard.integer(forKey: "one"))"
+        showAlertController()
     }
     
     @IBAction func buttonClicked1(_ sender: UIButton) {
@@ -118,6 +119,7 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(SecondupdateValue,forKey: "two")
         // 새로운 값 레이블에 보이기
         Result2.text = "\(keyWord.like.rawValue) \(UserDefaults.standard.integer(forKey: "two"))"
+        showAlertController()
         
     }
     
@@ -130,6 +132,7 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(ThirdupdateValue,forKey: "three")
         // 새로운 값 레이블에 보이기
         Result3.text = "\(keyWord.embarassed.rawValue) \(UserDefaults.standard.integer(forKey: "three"))"
+        showAlertController()
         
     }
     
@@ -142,6 +145,7 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(ForthupdateValue,forKey: "four")
         // 새로운 값 레이블에 보이기
         Result4.text = "\(keyWord.sad.rawValue) \(UserDefaults.standard.integer(forKey: "four"))"
+        showAlertController()
      
     }
     
@@ -153,7 +157,9 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(FifthupdateValue,forKey: "five")
         // 새로운 값 레이블에 보이기
         Result5.text = "\(keyWord.blue.rawValue) \(UserDefaults.standard.integer(forKey: "five"))"
+        showAlertController()
     
+
     }
     
     @IBAction func buttonClicked5(_ sender: UIButton) {
@@ -164,6 +170,7 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(SixthupdateValue,forKey: "six")
         // 새로운 값 레이블에 보이기
         Result6.text = "\(keyWord.bord.rawValue) \(UserDefaults.standard.integer(forKey: "six"))"
+        showAlertController()
 
     }
     
@@ -175,6 +182,7 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(SeventhupdateValue,forKey: "seven")
         // 새로운 값 레이블에 보이기
         Result7.text = "\(keyWord.cloudnine.rawValue) \(UserDefaults.standard.integer(forKey: "seven"))"
+        showAlertController()
     }
     
     @IBAction func buttonClicked7(_ sender: UIButton) {
@@ -185,6 +193,7 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(EighthupdateValue,forKey: "eight")
         // 새로운 값 레이블에 보이기
         Result8.text = "\(keyWord.mad.rawValue) \(UserDefaults.standard.integer(forKey: "eight"))"
+        showAlertController()
     }
     
     @IBAction func buttonClicked8(_ sender: UIButton) {
@@ -195,6 +204,7 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(NinethupdateValue,forKey: "nine")
         // 새로운 값 레이블에 보이기
         Result9.text = "\(keyWord.tear.rawValue) \(UserDefaults.standard.integer(forKey: "nine"))"
+        showAlertController()
     }
     
     // 버튼 누르고 앱 재실행하면 기록 초기화
